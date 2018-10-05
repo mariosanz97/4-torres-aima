@@ -128,7 +128,7 @@ public class TowersBoard {
 
 	public void moveTowerDown(int tower) {
 		/// IMPLEMENTAR MOVER TORRE ABAJO (VER EJEMPLO DE MOVIMIENTO DERECHA)
-		
+
 		int absPos = getPositionOf(tower);
 		int x = getXCoord(absPos);
 		int y = getYCoord(absPos);
@@ -200,7 +200,18 @@ public class TowersBoard {
 	public boolean canMoveTower(int tower, Action where) {
 		// IMPLEMENTAR: FUNCION QUE DEVUELVE VERDADERO SI EL MOVIMIENTO "where" PARA LA
 		// TORRE "tower" ES POSIBLE. DEVUELVE FALSO EOC.
-		return true;
+
+		if (tower == 1 && (where.equals(RIGHT_1) || where.equals(LEFT_1) || where.equals(UP_1) || where.equals(DOWN_1))) {
+			return true;
+		}else if(tower == 2 && (where.equals(RIGHT_2) || where.equals(LEFT_2) || where.equals(UP_2) || where.equals(DOWN_2))) {
+			return true;
+		}else if(tower == 3 && (where.equals(RIGHT_3) || where.equals(LEFT_3) || where.equals(UP_3) || where.equals(DOWN_3))) {
+			return true;
+		}else if(tower == 4 && (where.equals(RIGHT_4) || where.equals(LEFT_4) || where.equals(UP_4) || where.equals(DOWN_4))) {
+			return true;
+		}else {
+			return false;
+		}
 
 	}
 
