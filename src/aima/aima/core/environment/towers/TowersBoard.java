@@ -201,17 +201,57 @@ public class TowersBoard {
 		// IMPLEMENTAR: FUNCION QUE DEVUELVE VERDADERO SI EL MOVIMIENTO "where" PARA LA
 		// TORRE "tower" ES POSIBLE. DEVUELVE FALSO EOC.
 
-		if (tower == 1 && (where.equals(RIGHT_1) || where.equals(LEFT_1) || where.equals(UP_1) || where.equals(DOWN_1))) {
+
+	
+		System.out.println("y :::  "+getLocationOf(tower).getYCoOrdinate());
+//		System.out.println(getValueAt(getLocationOf(tower).getYCoOrdinate()-1));
+
+		
+//		System.out.println(getLocationOf(tower).getYCoOrdinate());
+//		
+//		System.out.println(getLocationOf(tower).getXCoOrdinate()-1);
+//		
+//		System.out.println(getLocationOf(tower).getXCoOrdinate());
+		
+		if (getLocationOf(tower).getYCoOrdinate() <= 8 && (where.equals(LEFT_1)) || where.equals(LEFT_3) || where.equals(LEFT_4)|| where.equals(LEFT_2)) {
+			//if (getValueAt(getLocationOf(tower).getYCoOrdinate()-1) == 0) {
+				return true;
+			
+		}else if(getLocationOf(tower).getYCoOrdinate() <= 0  && (where.equals(RIGHT_1)) || where.equals(RIGHT_2) || where.equals(RIGHT_3)|| where.equals(RIGHT_4)) {
 			return true;
-		}else if(tower == 2 && (where.equals(RIGHT_2) || where.equals(LEFT_2) || where.equals(UP_2) || where.equals(DOWN_2))) {
+		}else if(getLocationOf(tower).getXCoOrdinate() != 8 && (where.equals(UP_1)) || where.equals(UP_2) || where.equals(UP_3)|| where.equals(UP_4)) {
 			return true;
-		}else if(tower == 3 && (where.equals(RIGHT_3) || where.equals(LEFT_3) || where.equals(UP_3) || where.equals(DOWN_3))) {
+		}else if(getLocationOf(tower).getXCoOrdinate() != -1 && (where.equals(DOWN_1)) || where.equals(DOWN_2) || where.equals(DOWN_3)|| where.equals(DOWN_4)) {
 			return true;
-		}else if(tower == 4 && (where.equals(RIGHT_4) || where.equals(LEFT_4) || where.equals(UP_4) || where.equals(DOWN_4))) {
-			return true;
-		}else {
-			return false;
 		}
+		
+		return false;
+		
+		
+//		if (getLocationOf(tower).getYCoOrdinate()+1 != 0 && getLocationOf(tower).getYCoOrdinate() != 2 && getLocationOf(tower).getYCoOrdinate()  != 3 && getLocationOf(tower).getYCoOrdinate() != 4 && (where.equals(LEFT_1)) || where.equals(LEFT_3) || where.equals(LEFT_4)|| where.equals(LEFT_2)) {
+//			return true;
+//		}else if(getLocationOf(tower).getYCoOrdinate()+1 != -1 && getLocationOf(tower).getYCoOrdinate() != 1 && getLocationOf(tower).getYCoOrdinate()  != 3 && getLocationOf(tower).getYCoOrdinate() != 4 && (where.equals(RIGHT_1)) || where.equals(RIGHT_2) || where.equals(RIGHT_3)|| where.equals(RIGHT_4)) {
+//			return true;
+//		}else if(getLocationOf(tower).getXCoOrdinate()-1 != -1 && getLocationOf(tower).getYCoOrdinate() != 1 && getLocationOf(tower).getYCoOrdinate()  != 2 && getLocationOf(tower).getYCoOrdinate() != 4 && (where.equals(UP_1)) || where.equals(UP_2) || where.equals(UP_3)|| where.equals(UP_4)) {
+//			return true;
+//		}else if(getLocationOf(tower).getXCoOrdinate()-1 != 0 && getLocationOf(tower).getYCoOrdinate() != 2 && getLocationOf(tower).getYCoOrdinate()  != 3 && getLocationOf(tower).getYCoOrdinate() != 1 && (where.equals(DOWN_1)) || where.equals(DOWN_2) || where.equals(DOWN_3)|| where.equals(DOWN_4)) {
+//			return true;
+//		}else {
+//			return false;
+//		}
+		
+//		if (tower == 1 && (where.equals(RIGHT_1) || where.equals(LEFT_1) || where.equals(UP_1) || where.equals(DOWN_1))) {
+//			return true;
+//		}else if(tower == 2 && (where.equals(RIGHT_2) || where.equals(LEFT_2) || where.equals(UP_2) || where.equals(DOWN_2))) {
+//			return true;	
+//		}else if(tower == 3 && (where.equals(RIGHT_3) || where.equals(LEFT_3) || where.equals(UP_3) || where.equals(DOWN_3))) {
+//			return true;
+//		}else if(tower == 4 && (where.equals(RIGHT_4) || where.equals(LEFT_4) || where.equals(UP_4) || where.equals(DOWN_4))) {
+//			return true;
+//		}else {
+//			return false;
+//		}
+		
 
 	}
 
